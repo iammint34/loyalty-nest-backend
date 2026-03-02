@@ -16,12 +16,7 @@ async function bootstrap() {
 
   app.useGlobalInterceptors(new LoggingInterceptor());
 
-  app.enableCors({
-    origin: [
-      'http://localhost:5173', // Vite dev server (portal)
-      'http://localhost:8081', // Expo dev server (app)
-    ],
-  });
+  app.enableCors({ origin: true });
 
   app.setGlobalPrefix('api/v1');
 
